@@ -58,7 +58,7 @@ namespace ZohoAPI.Initializer
 
 			//TokenStore tokenstore = new DBStore(null, null, null, null, null);
 
-			TokenStore tokenstore = new FileStore("/Users/Documents/GitLab/csharp_sdk_token.txt");
+			TokenStore tokenstore = new FileStore(@"C:\Users\KyleAdamson\OneDrive - ALTIATECH LTD\Documents\Work Projects\Zoho Api\csharp_sdk_token.txt");
 
 			/*
             * autoRefreshFields
