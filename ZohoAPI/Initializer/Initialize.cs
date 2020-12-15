@@ -19,10 +19,10 @@ namespace ZohoAPI.Initializer
 			 * 1 -> Level of the log messages to be logged. Can be configured by typing Levels "." and choose any level from the list displayed.
 			 * 2 -> Absolute file path, where messages need to be logged.
 			 */
-			Logger logger = Logger.GetInstance(Logger.Levels.ALL, "/Users/Documents/GitLab/csharp_sdk_log.log");
+			Logger logger = Logger.GetInstance(Logger.Levels.ALL, @"C:\Users\KyleAdamson\OneDrive - ALTIATECH LTD\Documents\Work Projects\Zoho Api\csharp_sdk_log.log");
 
 			//Create an UserSignature instance that takes user Email as parameter
-			UserSignature user = new UserSignature("abc@zoho.com");
+			UserSignature user = new UserSignature("kyle@altiatech.com");
 
 			/*
 		     * Configure the environment
@@ -30,7 +30,7 @@ namespace ZohoAPI.Initializer
 		     * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter
 		     * Available Environments: PRODUCTION, DEVELOPER, SANDBOX
 		     */
-			Environment environment = USDataCenter.PRODUCTION;
+			Environment environment = EUDataCenter.PRODUCTION;
 
 			/*
 		     * Create a Token instance
@@ -44,7 +44,7 @@ namespace ZohoAPI.Initializer
 
 			//Token token = new OAuthToken("1000.xxxx", "xxxxxx", "1000.xxxxxx.xxxxxx", TokenType.GRANT, "https://www.zoho.com");
 
-			Token token = new OAuthToken("1000.0LS49EPZD7N1Z3VBCIT9JK5XJUZX9F", "0388a9876e176d333c8d524fbbcee3fcb8895b5f4c", "https://altiatechuri.com", TokenType.GRANT, "https://www.zoho.com");
+			Token token = new OAuthToken("1000.0LS49EPZD7N1Z3VBCIT9JK5XJUZX9F", "0388a9876e176d333c8d524fbbcee3fcb8895b5f4c", "GRANT token", TokenType.GRANT, "https://www.zoho.com");
 
 			/*
 		     * Create an instance of TokenStore.
@@ -56,9 +56,9 @@ namespace ZohoAPI.Initializer
 		     */
 			//TokenStore tokenstore = new DBStore();
 
-			TokenStore tokenstore = new DBStore(null, null, null, null, null);
+			//TokenStore tokenstore = new DBStore(null, null, null, null, null);
 
-			//TokenStore tokenstore = new FileStore("/Users/Documents/GitLab/csharp_sdk_token.txt");
+			TokenStore tokenstore = new FileStore("/Users/Documents/GitLab/csharp_sdk_token.txt");
 
 			/*
             * autoRefreshFields

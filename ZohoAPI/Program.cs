@@ -15,6 +15,7 @@ using static Com.Zoho.Crm.API.Modules.ModulesOperations;
 using Newtonsoft.Json.Linq;
 using Com.Zoho.API.Exception;
 using Com.Zoho.API.Authenticator.Store;
+using ZohoAPI.Data;
 
 namespace ZohoAPI
 {
@@ -22,10 +23,35 @@ namespace ZohoAPI
     {
         static void Main(string[] args)
         {
-            TokenStore tokenstore = new FileStore("/Users/user_name/Documents/csharp_sdk_token.txt");
-
             Initialize.SDKInitialize();
+            Currency();
 
+        }
+
+        public static void Currency()
+        {
+            try
+            {
+                long currencyId = 34770617368016;
+
+                ZohoAPI.Data.Currency.GetCurrencies();
+
+                ZohoAPI.Data.Currency.AddCurrencies();
+
+                ZohoAPI.Data.Currency.UpdateCurrencies();
+
+                ZohoAPI.Data.Currency.EnableMultipleCurrencies();
+
+                ZohoAPI.Data.Currency.UpdateBaseCurrency();
+
+                ZohoAPI.Data.Currency.GetCurrency(currencyId);
+
+                ZohoAPI.Data.Currency.UpdateCurrency(currencyId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(JsonConvert.SerializeObject(ex));
+            }
         }
     }
 }
