@@ -1,31 +1,17 @@
 ﻿using System;
-
 using System.Collections.Generic;
-
 using System.Reflection;
-
 using Com.Zoho.Crm.API.Currencies;
-
 using Com.Zoho.Crm.API.Users;
-
 using Com.Zoho.Crm.API.Util;
-
 using Newtonsoft.Json;
-
 using ActionHandler = Com.Zoho.Crm.API.Currencies.ActionHandler;
-
 using ActionResponse = Com.Zoho.Crm.API.Currencies.ActionResponse;
-
 using ActionWrapper = Com.Zoho.Crm.API.Currencies.ActionWrapper;
-
 using APIException = Com.Zoho.Crm.API.Currencies.APIException;
-
 using BodyWrapper = Com.Zoho.Crm.API.Currencies.BodyWrapper;
-
 using ResponseHandler = Com.Zoho.Crm.API.Currencies.ResponseHandler;
-
 using ResponseWrapper = Com.Zoho.Crm.API.Currencies.ResponseWrapper;
-
 using SuccessResponse = Com.Zoho.Crm.API.Currencies.SuccessResponse;
 
 namespace ZohoAPI.Data
