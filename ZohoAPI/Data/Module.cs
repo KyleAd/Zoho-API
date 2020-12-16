@@ -160,7 +160,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Module QuickCreate: " + module.QuickCreate);
 
                             //Get the modifiedBy User instance of each Module
-                            User modifiedBy = module.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = module.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -483,7 +483,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Module QuickCreate: " + module.QuickCreate);
 
                             //Get the modifiedBy User instance of each Module
-                            User modifiedBy = module.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = module.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)

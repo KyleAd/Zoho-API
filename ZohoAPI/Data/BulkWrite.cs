@@ -552,7 +552,7 @@ namespace ZohoAPI.Data
                         }
 
                         //Get the CreatedBy User instance of each BulkWriteResponse
-                        User createdBy = bulkWriteResponse.CreatedBy;
+                        Com.Zoho.Crm.API.Users.User createdBy = bulkWriteResponse.CreatedBy;
 
                         //Check if createdBy is not null
                         if (createdBy != null)

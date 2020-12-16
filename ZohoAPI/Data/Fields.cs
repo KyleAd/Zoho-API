@@ -191,7 +191,7 @@ namespace ZohoAPI.Data
                             }
 
                             //Get the Object obtained Currency instance
-                            Currency currency = Field.Currency;
+                            Com.Zoho.Crm.API.Currencies.Currency currency = Field.Currency;
 
                             //Check if currency is not null
                             if (currency != null)
@@ -222,7 +222,7 @@ namespace ZohoAPI.Data
                             if (lookup != null)
                             {
                                 //Get the Object obtained Layout instance
-                                Layout layout = lookup.Layout;
+                                Com.Zoho.Crm.API.Layouts.Layout layout = lookup.Layout;
 
                                 //Check if layout is not null
                                 if (layout != null)
@@ -288,7 +288,7 @@ namespace ZohoAPI.Data
                             if (subform != null)
                             {
                                 //Get the Object obtained Layout instance
-                                Layout layout = subform.Layout;
+                                Com.Zoho.Crm.API.Layouts.Layout layout = subform.Layout;
 
                                 //Check if layout is not null
                                 if (layout != null)
@@ -716,7 +716,7 @@ namespace ZohoAPI.Data
                             }
 
                             //Get the Object obtained Currency instance
-                            Currency currency = field.Currency;
+                            Com.Zoho.Crm.API.Currencies.Currency currency = field.Currency;
 
                             //Check if currency is not null
                             if (currency != null)
@@ -747,7 +747,7 @@ namespace ZohoAPI.Data
                             if (lookup != null)
                             {
                                 //Get the Object obtained Layout instance
-                                Layout layout = lookup.Layout;
+                                Com.Zoho.Crm.API.Layouts.Layout layout = lookup.Layout;
 
                                 //Check if layout is not null
                                 if (layout != null)
@@ -813,7 +813,7 @@ namespace ZohoAPI.Data
                             if (subform != null)
                             {
                                 //Get the Object obtained Layout instance
-                                Layout layout = subform.Layout;
+                                Com.Zoho.Crm.API.Layouts.Layout layout = subform.Layout;
 
                                 //Check if layout is not null
                                 if (layout != null)

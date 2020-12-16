@@ -86,7 +86,7 @@ namespace ZohoAPI.Data
                             }
 
                             //Get the createdBy User instance of each currency
-                            User createdBy = currency.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = currency.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)
@@ -111,7 +111,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Currency Name: " + currency.Name);
 
                             //Get the modifiedBy User instance of each currency
-                            User modifiedBy = currency.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = currency.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -979,7 +979,7 @@ namespace ZohoAPI.Data
                             }
 
                             //Get the createdBy User instance of each currency
-                            User createdBy = currency.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = currency.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)
@@ -1004,7 +1004,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Currency Name: " + currency.Name);
 
                             //Get the modifiedBy User instance of each currency
-                            User modifiedBy = currency.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = currency.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)

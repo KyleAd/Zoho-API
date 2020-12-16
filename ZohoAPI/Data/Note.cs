@@ -79,7 +79,7 @@ namespace ZohoAPI.Data
                         foreach (Com.Zoho.Crm.API.Notes.Note note in notes)
                         {
                             //Get the owner User instance of each Note
-                            User owner = note.Owner;
+                            Com.Zoho.Crm.API.Users.User owner = note.Owner;
 
                             //Check if owner is not null
                             if (owner != null)
@@ -98,12 +98,12 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Note ModifiedTime: " + note.ModifiedTime);
 
                             //Get the list of Attachment instance each Note
-                            List<Attachment> attachments = note.Attachments;
+                            List<Com.Zoho.Crm.API.Attachments.Attachment> attachments =  note.Attachments;
 
                             //Check if attachments is not null
                             if (attachments != null)
                             {
-                                foreach (Attachment attachment in attachments)
+                                foreach (Com.Zoho.Crm.API.Attachments.Attachment attachment in attachments)
                                 {
                                     PrintAttachment(attachment);
                                 }
@@ -138,7 +138,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Note IsSharedToClient: " + note.IsSharedToClient);
 
                             //Get the modifiedBy User instance of each Note
-                            User modifiedBy = note.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = note.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -166,7 +166,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Note Id: " + note.Id);
 
                             //Get the createdBy User instance of each Note
-                            User createdBy = note.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = note.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)
@@ -275,10 +275,10 @@ namespace ZohoAPI.Data
             }
         }
 
-        private static void PrintAttachment(Attachment attachment)
+        private static void PrintAttachment(Com.Zoho.Crm.API.Attachments.Attachment attachment)
         {
             //Get the Owner User instance of each attachment
-            User owner = attachment.Owner;
+            Com.Zoho.Crm.API.Users.User owner = attachment.Owner;
 
             //Check if owner is not null
             if (owner != null)
@@ -331,7 +331,7 @@ namespace ZohoAPI.Data
             Console.WriteLine("Note Attachment seModule: " + attachment.SeModule);
 
             //Get the modifiedBy User instance of each attachment
-            User modifiedBy = attachment.ModifiedBy;
+            Com.Zoho.Crm.API.Users.User modifiedBy = attachment.ModifiedBy;
 
             //Check if modifiedBy is not null
             if (modifiedBy != null)
@@ -353,7 +353,7 @@ namespace ZohoAPI.Data
             Console.WriteLine("Note Attachment ID: " + attachment.Id);
 
             //Get the createdBy User instance of each attachment
-            User createdBy = attachment.CreatedBy;
+            Com.Zoho.Crm.API.Users.User createdBy = attachment.CreatedBy;
 
             //Check if createdBy is not null
             if (createdBy != null)
@@ -931,7 +931,7 @@ namespace ZohoAPI.Data
                         foreach (Com.Zoho.Crm.API.Notes.Note note in notes)
                         {
                             //Get the owner User instance of each Note
-                            User owner = note.Owner;
+                            Com.Zoho.Crm.API.Users.User owner = note.Owner;
 
                             //Check if owner is not null
                             if (owner != null)
@@ -950,12 +950,12 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Note ModifiedTime: " + note.ModifiedTime);
 
                             //Get the list of Attachment instance each Note
-                            List<Attachment> attachments = note.Attachments;
+                            List<Com.Zoho.Crm.API.Attachments.Attachment> attachments = note.Attachments;
 
                             //Check if attachments is not null
                             if (attachments != null)
                             {
-                                foreach (Attachment attachment in attachments)
+                                foreach (Com.Zoho.Crm.API.Attachments.Attachment attachment in attachments)
                                 {
                                     PrintAttachment(attachment);
                                 }
@@ -990,7 +990,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Note IsSharedToClient: " + note.IsSharedToClient);
 
                             //Get the modifiedBy User instance of each Note
-                            User modifiedBy = note.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = note.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -1018,7 +1018,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Note Id: " + note.Id);
 
                             //Get the createdBy User instance of each Note
-                            User createdBy = note.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = note.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)

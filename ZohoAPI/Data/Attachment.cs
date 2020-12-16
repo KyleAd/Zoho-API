@@ -74,7 +74,7 @@ namespace ZohoAPI.Data
 						foreach (Com.Zoho.Crm.API.Attachments.Attachment attachment in attachments)
 						{
 							//Get the owner User instance of each attachment
-							User owner = attachment.Owner;
+							Com.Zoho.Crm.API.Users.User owner = attachment.Owner;
 
 							//Check if owner is not null
 							if (owner != null)
@@ -127,7 +127,7 @@ namespace ZohoAPI.Data
 							Console.WriteLine("Attachment seModule: " + attachment.SeModule);
 
 							//Get the modifiedBy User instance of each attachment
-							User modifiedBy = attachment.ModifiedBy;
+							Com.Zoho.Crm.API.Users.User modifiedBy = attachment.ModifiedBy;
 
 							//Check if modifiedBy is not null
 							if (modifiedBy != null)
@@ -149,7 +149,7 @@ namespace ZohoAPI.Data
 							Console.WriteLine("Attachment ID: " + attachment.Id);
 
 							//Get the createdBy User instance of each attachment
-							User createdBy = attachment.CreatedBy;
+							Com.Zoho.Crm.API.Users.User createdBy = attachment.CreatedBy;
 
 							//Check if createdBy is not null
 							if (createdBy != null)

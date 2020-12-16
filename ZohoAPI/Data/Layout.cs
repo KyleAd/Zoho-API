@@ -84,7 +84,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Layout Visible: " + layout.Visible);
 
                             //Get the createdFor User instance of each Layout
-                            User createdFor = layout.CreatedFor;
+                            Com.Zoho.Crm.API.Users.User createdFor = layout.CreatedFor;
 
                             //Check if createdFor is not null
                             if (createdFor != null)
@@ -103,7 +103,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Layout Name: " + layout.Name);
 
                             //Get the modifiedBy User instance of each Layout
-                            User modifiedBy = layout.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = layout.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -141,7 +141,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Layout ID: " + layout.Id);
 
                             //Get the createdBy User instance of each Layout
-                            User createdBy = layout.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = layout.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)
@@ -356,7 +356,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Layout Visible: " + layout.Visible);
 
                             //Get the createdFor User instance of each Layout
-                            User createdFor = layout.CreatedFor;
+                            Com.Zoho.Crm.API.Users.User createdFor = layout.CreatedFor;
 
                             //Check if createdFor is not null
                             if (createdFor != null)
@@ -375,7 +375,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Layout Name: " + layout.Name);
 
                             //Get the modifiedBy User instance of each Layout
-                            User modifiedBy = layout.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = layout.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -413,7 +413,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Layout ID: " + layout.Id);
 
                             //Get the createdBy User instance of each Layout
-                            User createdBy = layout.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = layout.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)
@@ -675,7 +675,7 @@ namespace ZohoAPI.Data
             }
 
             //Get the Object obtained Currency instance
-            Currency currency = field.Currency;
+            Com.Zoho.Crm.API.Currencies.Currency currency = field.Currency;
 
             //Check if currency is not null
             if (currency != null)

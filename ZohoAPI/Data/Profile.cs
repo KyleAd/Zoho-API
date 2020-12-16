@@ -73,7 +73,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Profile Name: " + profile.Name);
 
                             //Get the modifiedBy User instance of each Profile
-                            User modifiedBy = profile.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = profile.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -98,7 +98,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Profile Category: " + profile.Category);
 
                             //Get the createdBy User instance of each Profile
-                            User createdBy = profile.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = profile.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)
@@ -260,7 +260,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Profile Name: " + profile.Name);
 
                             //Get the modifiedBy User instance of each Profile
-                            User modifiedBy = profile.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = profile.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -285,7 +285,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Profile Category: " + profile.Category);
 
                             //Get the createdBy User instance of each Profile
-                            User createdBy = profile.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = profile.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)

@@ -393,7 +393,7 @@ namespace ZohoAPI.Data
 							}
 
 							//Get the CreatedBy User instance of each jobDetail
-							User createdBy = jobDetail.CreatedBy;
+							Com.Zoho.Crm.API.Users.User createdBy = jobDetail.CreatedBy;
 
 							//Check if createdBy is not null
 							if (createdBy != null)

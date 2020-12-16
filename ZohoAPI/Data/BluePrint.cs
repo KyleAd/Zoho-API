@@ -120,7 +120,7 @@ namespace ZohoAPI.Data
 							Console.WriteLine("Record ID: " + data.Id);
 
 							//Get the createdBy User instance of each record
-							User createdBy = data.CreatedBy;
+							Com.Zoho.Crm.API.Users.User createdBy = data.CreatedBy;
 
 							if (createdBy != null)
 							{
@@ -146,7 +146,7 @@ namespace ZohoAPI.Data
 							}
 
 							//Get the modifiedBy User instance of each record
-							User modifiedBy = data.ModifiedBy;
+							Com.Zoho.Crm.API.Users.User modifiedBy = data.ModifiedBy;
 
 							//Check if modifiedByUser is not null
 							if (modifiedBy != null)
@@ -216,7 +216,7 @@ namespace ZohoAPI.Data
 									Console.WriteLine("Transition Fields Mandatory: " + field.Mandatory.ToString());
 								}
 
-								Layout layout = field.Layouts;
+								Com.Zoho.Crm.API.Layouts.Layout layout = field.Layouts;
 
 								if (layout != null)
 								{
