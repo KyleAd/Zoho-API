@@ -456,9 +456,9 @@ namespace ZohoAPI
 
                 ZohoAPI.Data.Record.UpdateRecord(moduleAPIName, recordId);
 
-                ZohoAPI.Data.Record.Record.DeleteRecord(moduleAPIName, recordId);
+                ZohoAPI.Data.Record.DeleteRecord(moduleAPIName, recordId);
 
-                ZohoAPI.Data.Record.Record.GetRecords(moduleAPIName);
+                ZohoAPI.Data.Record.GetRecords(moduleAPIName);
 
                 ZohoAPI.Data.Record.CreateRecords(moduleAPIName);
 

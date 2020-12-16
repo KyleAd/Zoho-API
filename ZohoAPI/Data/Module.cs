@@ -530,7 +530,8 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Module BusinessCardFieldLimit: " + module.BusinessCardFieldLimit);
 
                             //Get the CustomView instance of each Module
-                            API.CustomViews.CustomView customView = module.CustomView;
+                            //Get the CustomView instance of each Module
+                            Com.Zoho.Crm.API.CustomViews.CustomView customView = module.CustomView;
 
                             //Check if customView is not null
                             if (customView != null)

@@ -411,7 +411,7 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Attachment File Size: " + attachment.Size.ToString());
 
                                                     //Get the parentId Record instance of each attachment
-                                                    API.Record.Record parentId = attachment.ParentId;
+                                                    Com.Zoho.Crm.API.Record.Record parentId = attachment.ParentId;
 
                                                     //Check if parentId is not null
                                                     if (parentId != null)
@@ -477,12 +477,12 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Attachment LinkUrl: " + attachment.LinkUrl);
                                                 }
                                             }
-                                            else if (dataList[0] is API.Record.Record)
+                                            else if (dataList[0] is Com.Zoho.Crm.API.Record.Record)
                                             {
 
-                                                List<API.Record.Record> recordList = (List<API.Record.Record>)dataList;
+                                                List<Com.Zoho.Crm.API.Record.Record> recordList = (List<Com.Zoho.Crm.API.Record.Record>)dataList;
 
-                                                foreach (API.Record.Record record1 in recordList)
+                                                foreach (Com.Zoho.Crm.API.Record.Record record1 in recordList)
                                                 {
                                                     //Get the details map
                                                     foreach (KeyValuePair<string, object> entry1 in record1.GetKeyValues())
@@ -1382,7 +1382,7 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Attachment File Size: " + attachment.Size.ToString());
 
                                                     //Get the parentId Record instance of each attachment
-                                                    API.Record.Record parentId = attachment.ParentId;
+                                                    Com.Zoho.Crm.API.Record.Record parentId = attachment.ParentId;
 
                                                     //Check if parentId is not null
                                                     if (parentId != null)
@@ -1499,7 +1499,7 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Attachment File Size: " + attachment.Size.ToString());
 
                                                     //Get the parentId Record instance of each attachment
-                                                    API.Record.Record parentId = attachment.ParentId;
+                                                    Com.Zoho.Crm.API.Record.Record parentId = attachment.ParentId;
 
                                                     //Check if parentId is not null
                                                     if (parentId != null)
@@ -1647,9 +1647,9 @@ namespace ZohoAPI.Data
 
                                         Console.WriteLine("Record Consent DataProcessingBasis: " + consent.DataProcessingBasis);
                                     }
-                                    else if (value is API.Record.Record)
+                                    else if (value is Com.Zoho.Crm.API.Record.Record)
                                     {
-                                        API.Record.Record recordValue = (API.Record.Record)value;
+                                        Com.Zoho.Crm.API.Record.Record recordValue = (Com.Zoho.Crm.API.Record.Record)value;
 
                                         Console.WriteLine("RelatedRecord " + keyName + " ID: " + recordValue.Id);
 

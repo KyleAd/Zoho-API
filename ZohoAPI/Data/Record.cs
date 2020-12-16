@@ -555,7 +555,7 @@ namespace ZohoAPI.Data
                                     }
                                     else if (value is Layout)
                                     {
-                                        API.Layouts.Layout layout = (Layout)value;
+                                        Com.Zoho.Crm.API.Layouts.Layout layout = (Layout)value;
 
                                         if (layout != null)
                                         {
@@ -604,10 +604,10 @@ namespace ZohoAPI.Data
                             }
                         }
                     }
-                    else if (responseHandler is API.Record.FileBodyWrapper)
+                    else if (responseHandler is Com.Zoho.Crm.API.Record.FileBodyWrapper)
                     {
                         //Get the received FileBodyWrapper instance
-                        API.Record.FileBodyWrapper fileBodyWrapper = (API.Record.FileBodyWrapper) responseHandler;
+                        Com.Zoho.Crm.API.Record.FileBodyWrapper fileBodyWrapper = (Com.Zoho.Crm.API.Record.FileBodyWrapper) responseHandler;
 
 						//Get StreamWrapper instance from the returned FileBodyWrapper instance
 						StreamWrapper streamWrapper = fileBodyWrapper.File;
@@ -753,9 +753,9 @@ namespace ZohoAPI.Data
             
             //record1.AddKeyValue("File_Upload", fileDetails);
 
-            List<API.Record.Record> subformList = new List<API.Record.Record>();
+            List<Com.Zoho.Crm.API.Record.Record> subformList = new List<Com.Zoho.Crm.API.Record.Record>();
 
-            API.Record.Record subform = new API.Record.Record();
+            Com.Zoho.Crm.API.Record.Record subform = new Com.Zoho.Crm.API.Record.Record();
 
             subform.AddKeyValue("Subform FieldAPIName", "FieldValue");
 
@@ -765,19 +765,19 @@ namespace ZohoAPI.Data
 
             /** Following methods are being used only by Inventory modules */
 
-            API.Record.Record dealName = new API.Record.Record();
+            Com.Zoho.Crm.API.Record.Record dealName = new Com.Zoho.Crm.API.Record.Record();
 
             dealName.AddFieldValue(Deals.ID, 34770614995070);
 
             record1.AddFieldValue(Sales_Orders.DEAL_NAME, dealName);
 
-            API.Record.Record contactName = new API.Record.Record();
+            Com.Zoho.Crm.API.Record.Record contactName = new Com.Zoho.Crm.API.Record.Record();
 
             contactName.AddFieldValue(Contacts.ID, 34770614977055);
 
             record1.AddFieldValue(Purchase_Orders.CONTACT_NAME, contactName);
 
-            API.Record.Record accountName = new API.Record.Record();
+            Com.Zoho.Crm.API.Record.Record accountName = new Com.Zoho.Crm.API.Record.Record();
 
             accountName.AddKeyValue("name", "automatedAccount");
 
@@ -1561,7 +1561,7 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Attachment File Size: " + attachment.Size.ToString());
 
                                                     //Get the parentId Record instance of each attachment
-                                                    API.Record.Record parentId = attachment.ParentId;
+                                                    Com.Zoho.Crm.API.Record.Record parentId = attachment.ParentId;
 
                                                     //Check if parentId is not null
                                                     if (parentId != null)
@@ -3437,7 +3437,7 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Attachment File Size: " + attachment.Size.ToString());
 
                                                     //Get the parentId Record instance of each attachment
-                                                    API.Record.Record parentId = attachment.ParentId;
+                                                    Com.Zoho.Crm.API.Record.Record parentId = attachment.ParentId;
 
                                                     //Check if parentId is not null
                                                     if (parentId != null)
