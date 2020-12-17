@@ -23,6 +23,7 @@ namespace ZohoAPI
     {
         static void Main(string[] args)
         {
+            Initialize.SDKInitialize();
             Attachment();
             BluePrint();
             BulkRead();
@@ -72,17 +73,17 @@ namespace ZohoAPI
 
                 List<long> attachmentIds = new List<long>() { 34770617600002, 34770617607001, 34770615961010 };
 
-                ZohoAPI.Data.Attachment.UploadAttachments(moduleAPIName, recordId, absoluteFilePath);
+                Data.Attachment.UploadAttachments(moduleAPIName, recordId, absoluteFilePath);
 
-                ZohoAPI.Data.Attachment.GetAttachments(moduleAPIName, recordId);
+                Data.Attachment.GetAttachments(moduleAPIName, recordId);
 
-                ZohoAPI.Data.Attachment.DeleteAttachments(moduleAPIName, recordId, attachmentIds);
+                Data.Attachment.DeleteAttachments(moduleAPIName, recordId, attachmentIds);
 
-                ZohoAPI.Data.Attachment.DownloadAttachment(moduleAPIName, recordId, attachmentId, destinationFolder);
+                Data.Attachment.DownloadAttachment(moduleAPIName, recordId, attachmentId, destinationFolder);
 
-                ZohoAPI.Data.Attachment.DeleteAttachment(moduleAPIName, recordId, attachmentId);
+                Data.Attachment.DeleteAttachment(moduleAPIName, recordId, attachmentId);
 
-                ZohoAPI.Data.Attachment.UploadLinkAttachments(moduleAPIName, recordId, attachmentURL);
+                Data.Attachment.UploadLinkAttachments(moduleAPIName, recordId, attachmentURL);
             }
             catch (Exception ex)
             {
@@ -100,9 +101,9 @@ namespace ZohoAPI
 
                 long transitionId = 34770610173093;
 
-                ZohoAPI.Data.BluePrint.GetBlueprint(moduleAPIName, recordId);
+                Data.BluePrint.GetBlueprint(moduleAPIName, recordId);
 
-                ZohoAPI.Data.BluePrint.UpdateBlueprint(moduleAPIName, recordId, transitionId);
+                Data.BluePrint.UpdateBlueprint(moduleAPIName, recordId, transitionId);
             }
             catch (Exception ex)
             {
@@ -120,11 +121,11 @@ namespace ZohoAPI
 
                 string destinationFolder = "/Users/Documents/java/attachment";
 
-                ZohoAPI.Data.BulkRead.CreateBulkReadJob(moduleAPIName);
+                Data.BulkRead.CreateBulkReadJob(moduleAPIName);
 
-                ZohoAPI.Data.BulkRead.GetBulkReadJobDetails(jobId);
+                Data.BulkRead.GetBulkReadJobDetails(jobId);
 
-                ZohoAPI.Data.BulkRead.DownloadResult(jobId, destinationFolder);
+                Data.BulkRead.DownloadResult(jobId, destinationFolder);
             }
             catch (Exception ex)
             {
@@ -150,13 +151,13 @@ namespace ZohoAPI
 
                 string destinationFolder = "/Users/Documents/java/attachment";
 
-                ZohoAPI.Data.BulkWrite.UploadFile(orgID, absoluteFilePath);
+                Data.BulkWrite.UploadFile(orgID, absoluteFilePath);
 
-                ZohoAPI.Data.BulkWrite.CreateBulkWriteJob(moduleAPIName, fileId);
+                Data.BulkWrite.CreateBulkWriteJob(moduleAPIName, fileId);
 
-                ZohoAPI.Data.BulkWrite.GetBulkWriteJobDetails(jobID);
+                Data.BulkWrite.GetBulkWriteJobDetails(jobID);
 
-                ZohoAPI.Data.BulkWrite.DownloadBulkWriteResult(downloadUrl, destinationFolder);
+                Data.BulkWrite.DownloadBulkWriteResult(downloadUrl, destinationFolder);
             }
             catch (SDKException ex)
             {
@@ -172,19 +173,19 @@ namespace ZohoAPI
 
                 List<long> contactRoleIds = new List<long>() { 34770617600010, 34770617600011, 34770617600012, 34770617600013, 34770617600014 };
 
-                ZohoAPI.Data.ContactRoles.GetContactRoles();
+                Data.ContactRoles.GetContactRoles();
 
-                ZohoAPI.Data.ContactRoles.CreateContactRoles();
+                Data.ContactRoles.CreateContactRoles();
 
-                ZohoAPI.Data.ContactRoles.UpdateContactRoles();
+                Data.ContactRoles.UpdateContactRoles();
 
-                ZohoAPI.Data.ContactRoles.DeleteContactRoles(contactRoleIds);
+                Data.ContactRoles.DeleteContactRoles(contactRoleIds);
 
-                ZohoAPI.Data.ContactRoles.GetContactRole(contactRoleId);
+                Data.ContactRoles.GetContactRole(contactRoleId);
 
-                ZohoAPI.Data.ContactRoles.UpdateContactRole(contactRoleId);
+                Data.ContactRoles.UpdateContactRole(contactRoleId);
 
-                ZohoAPI.Data.ContactRoles.DeleteContactRole(contactRoleId);
+                Data.ContactRoles.DeleteContactRole(contactRoleId);
             }
             catch (Exception ex)
             {
@@ -198,19 +199,19 @@ namespace ZohoAPI
             {
                 long currencyId = 34770617368016;
 
-                ZohoAPI.Data.Currency.GetCurrencies();
+                Data.Currency.GetCurrencies();
 
-                ZohoAPI.Data.Currency.AddCurrencies();
+                Data.Currency.AddCurrencies();
 
-                ZohoAPI.Data.Currency.UpdateCurrencies();
+                Data.Currency.UpdateCurrencies();
 
-                ZohoAPI.Data.Currency.EnableMultipleCurrencies();
+                Data.Currency.EnableMultipleCurrencies();
 
-                ZohoAPI.Data.Currency.UpdateBaseCurrency();
+                Data.Currency.UpdateBaseCurrency();
 
-                ZohoAPI.Data.Currency.GetCurrency(currencyId);
+                Data.Currency.GetCurrency(currencyId);
 
-                ZohoAPI.Data.Currency.UpdateCurrency(currencyId);
+                Data.Currency.UpdateCurrency(currencyId);
             }
             catch (Exception ex)
             {
@@ -233,9 +234,9 @@ namespace ZohoAPI
                 //    Com.Zoho.Crm.Sample.CustomView.CustomView.GetCustomViews(name);
                 //}
 
-                ZohoAPI.Data.CustomView.GetCustomViews(moduleAPIName);
+                Data.CustomView.GetCustomViews(moduleAPIName);
 
-                ZohoAPI.Data.CustomView.GetCustomView(moduleAPIName, customID);
+                Data.CustomView.GetCustomView(moduleAPIName, customID);
             }
             catch (Exception ex)
             {
@@ -258,9 +259,9 @@ namespace ZohoAPI
                 //    Com.Zoho.Crm.Sample.Fields.Fields.GetFields(name);
                 //}
 
-                ZohoAPI.Data.Fields.GetFields(moduleAPIName);
+                Fields.GetFields(moduleAPIName);
 
-                ZohoAPI.Data.Fields.GetField(moduleAPIName, fieldId);
+                Fields.GetField(moduleAPIName, fieldId);
             }
             catch (Exception ex)
             {
@@ -276,9 +277,9 @@ namespace ZohoAPI
 
                 string id = "ae9c7cefa418aec61f7ae1b547fbcd42e5756301";
 
-                ZohoAPI.Data.File.UploadFiles();
+                Data.File.UploadFiles();
 
-                ZohoAPI.Data.File.GetFile(id, destinationFolder);
+                Data.File.GetFile(id, destinationFolder);
             }
             catch (Exception ex)
             {
@@ -301,9 +302,9 @@ namespace ZohoAPI
                 //    Com.Zoho.Crm.Sample.Layouts.Layout.GetLayouts(name);
                 //}
 
-                ZohoAPI.Data.Layout.GetLayouts(moduleAPIName);
+                Data.Layout.GetLayouts(moduleAPIName);
 
-                ZohoAPI.Data.Layout.GetLayout(moduleAPIName, layoutId);
+                Data.Layout.GetLayout(moduleAPIName, layoutId);
             }
             catch (Exception ex)
             {
@@ -319,13 +320,13 @@ namespace ZohoAPI
 
                 long moduleId = 34770613905003;
 
-                ZohoAPI.Data.Modules.GetModules();
+                Modules.GetModules();
 
-                ZohoAPI.Data.Modules.GetModule(moduleAPIName);
+                Modules.GetModule(moduleAPIName);
 
-                ZohoAPI.Data.Modules.UpdateModuleByAPIName(moduleAPIName);
+                Modules.UpdateModuleByAPIName(moduleAPIName);
 
-                ZohoAPI.Data.Modules.UpdateModuleById(moduleId);
+                Modules.UpdateModuleById(moduleId);
             }
             catch (Exception ex)
             {
@@ -341,19 +342,19 @@ namespace ZohoAPI
 
                 long noteId = 34770617613021;
 
-                ZohoAPI.Data.Note.GetNotes();
+                Data.Note.GetNotes();
 
-                ZohoAPI.Data.Note.CreateNotes();
+                Data.Note.CreateNotes();
 
-                ZohoAPI.Data.Note.UpdateNotes();
+                Data.Note.UpdateNotes();
 
-                ZohoAPI.Data.Note.DeleteNotes(notesId);
+                Data.Note.DeleteNotes(notesId);
 
-                ZohoAPI.Data.Note.GetNote(noteId);
+                Data.Note.GetNote(noteId);
 
-                ZohoAPI.Data.Note.UpdateNote(noteId);
+                Data.Note.UpdateNote(noteId);
 
-                ZohoAPI.Data.Note.DeleteNote(noteId);
+                Data.Note.DeleteNote(noteId);
             }
             catch (Exception ex)
             {
@@ -367,17 +368,17 @@ namespace ZohoAPI
             {
                 List<long> channelIds = new List<long>() { 1006800212 };
 
-                ZohoAPI.Data.Notification.EnableNotifications();
+                Data.Notification.EnableNotifications();
 
-                ZohoAPI.Data.Notification.GetNotificationDetails();
+                Data.Notification.GetNotificationDetails();
 
-                ZohoAPI.Data.Notification.UpdateNotifications();
+                Data.Notification.UpdateNotifications();
 
-                ZohoAPI.Data.Notification.UpdateNotification();
+                Data.Notification.UpdateNotification();
 
-                ZohoAPI.Data.Notification.DisableNotifications(channelIds);
+                Data.Notification.DisableNotifications(channelIds);
 
-                ZohoAPI.Data.Notification.DisableNotification();
+                Data.Notification.DisableNotification();
             }
             catch (Exception ex)
             {
@@ -391,9 +392,9 @@ namespace ZohoAPI
             {
                 string absoluteFilePath = "/Users/Desktop/download.png";
 
-                ZohoAPI.Data.Organization.GetOrganization();
+                Data.Organization.GetOrganization();
 
-                ZohoAPI.Data.Organization.UploadOrganizationPhoto(absoluteFilePath);
+                Data.Organization.UploadOrganizationPhoto(absoluteFilePath);
             }
             catch (Exception ex)
             {
@@ -407,9 +408,9 @@ namespace ZohoAPI
             {
                 long profileId = 34770610026011;
 
-                ZohoAPI.Data.Profile.GetProfiles();
+                Data.Profile.GetProfiles();
 
-                ZohoAPI.Data.Profile.GetProfile(profileId);
+                Data.Profile.GetProfile(profileId);
             }
             catch (Exception ex)
             {
@@ -421,7 +422,7 @@ namespace ZohoAPI
         {
             try
             {
-                ZohoAPI.Data.Query.GetRecords();
+                Data.Query.GetRecords();
             }
             catch (Exception ex)
             {
@@ -452,37 +453,37 @@ namespace ZohoAPI
 
                 string jobId = "34770617633026";
 
-                ZohoAPI.Data.Record.GetRecord(moduleAPIName, recordId, destinationFolder);
+                Data.Record.GetRecord(moduleAPIName, recordId, destinationFolder);
 
-                ZohoAPI.Data.Record.UpdateRecord(moduleAPIName, recordId);
+                Data.Record.UpdateRecord(moduleAPIName, recordId);
 
-                ZohoAPI.Data.Record.DeleteRecord(moduleAPIName, recordId);
+                Data.Record.DeleteRecord(moduleAPIName, recordId);
 
-                ZohoAPI.Data.Record.GetRecords(moduleAPIName);
+                Data.Record.GetRecords(moduleAPIName);
 
-                ZohoAPI.Data.Record.CreateRecords(moduleAPIName);
+                Data.Record.CreateRecords(moduleAPIName);
 
-                ZohoAPI.Data.Record.UpdateRecords(moduleAPIName);
+                Data.Record.UpdateRecords(moduleAPIName);
 
-                ZohoAPI.Data.Record.DeleteRecords(moduleAPIName, recordIds);
+                Data.Record.DeleteRecords(moduleAPIName, recordIds);
 
-                ZohoAPI.Data.Record.UpsertRecords(moduleAPIName);
+                Data.Record.UpsertRecords(moduleAPIName);
 
-                ZohoAPI.Data.Record.GetDeletedRecords(moduleAPIName);
+                Data.Record.GetDeletedRecords(moduleAPIName);
 
-                ZohoAPI.Data.Record.SearchRecords(moduleAPIName);
+                Data.Record.SearchRecords(moduleAPIName);
 
-                ZohoAPI.Data.Record.ConvertLead(recordId);
+                Data.Record.ConvertLead(recordId);
 
-                ZohoAPI.Data.Record.UploadPhoto(moduleAPIName, recordId, absoluteFilePath);
+                Data.Record.UploadPhoto(moduleAPIName, recordId, absoluteFilePath);
 
-                ZohoAPI.Data.Record.GetPhoto(moduleAPIName, recordId, destinationFolder);
+                Data.Record.GetPhoto(moduleAPIName, recordId, destinationFolder);
 
-                ZohoAPI.Data.Record.DeletePhoto(moduleAPIName, recordId);
+                Data.Record.DeletePhoto(moduleAPIName, recordId);
 
-                ZohoAPI.Data.Record.MassUpdateRecords(moduleAPIName);
+                Data.Record.MassUpdateRecords(moduleAPIName);
 
-                ZohoAPI.Data.Record.GetMassUpdateStatus(moduleAPIName, jobId);
+                Data.Record.GetMassUpdateStatus(moduleAPIName, jobId);
             }
             catch (Exception ex)
             {
@@ -505,9 +506,9 @@ namespace ZohoAPI
                 //    Com.Zoho.Crm.Sample.RelatedList.RelatedList.GetRelatedLists(name);
                 //}
 
-                ZohoAPI.Data.RelatedList.GetRelatedLists(moduleAPIName);
+                Data.RelatedList.GetRelatedLists(moduleAPIName);
 
-                ZohoAPI.Data.RelatedList.GetRelatedList(moduleAPIName, relatedListId);
+                Data.RelatedList.GetRelatedList(moduleAPIName, relatedListId);
             }
             catch (Exception ex)
             {
@@ -531,19 +532,19 @@ namespace ZohoAPI
 
                 List<long> relatedListIds = new List<long>() { 34770610307003, 34770615917011, 34770615919001 };
 
-                ZohoAPI.Data.RelatedRecords.GetRelatedRecords(moduleAPIName, recordId, relatedListAPIName);
+                Data.RelatedRecords.GetRelatedRecords(moduleAPIName, recordId, relatedListAPIName);
 
-                ZohoAPI.Data.RelatedRecords.UpdateRelatedRecords(moduleAPIName, recordId, relatedListAPIName);
+                Data.RelatedRecords.UpdateRelatedRecords(moduleAPIName, recordId, relatedListAPIName);
 
-                ZohoAPI.Data.RelatedRecords.DelinkRecords(moduleAPIName, recordId, relatedListAPIName, relatedListIds);
+                Data.RelatedRecords.DelinkRecords(moduleAPIName, recordId, relatedListAPIName, relatedListIds);
 
-                ZohoAPI.Data.RelatedRecords.GetRelatedRecord(moduleAPIName, recordId, relatedListAPIName, relatedRecordId, destinationFolder);
+                Data.RelatedRecords.GetRelatedRecord(moduleAPIName, recordId, relatedListAPIName, relatedRecordId, destinationFolder);
 
-                ZohoAPI.Data.RelatedRecords.UpdateRelatedRecord(moduleAPIName, recordId, relatedListAPIName, relatedRecordId);
+                Data.RelatedRecords.UpdateRelatedRecord(moduleAPIName, recordId, relatedListAPIName, relatedRecordId);
 
-                ZohoAPI.Data.RelatedRecords.DelinkRecord(moduleAPIName, recordId, relatedListAPIName, relatedRecordId);
+                Data.RelatedRecords.DelinkRecord(moduleAPIName, recordId, relatedListAPIName, relatedRecordId);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(JsonConvert.SerializeObject(ex));
             }
@@ -555,9 +556,9 @@ namespace ZohoAPI
             {
                 long roleId = 34770610026008;
 
-                ZohoAPI.Data.Role.GetRoles();
+                Data.Role.GetRoles();
 
-                ZohoAPI.Data.Role.GetRole(roleId);
+                Data.Role.GetRole(roleId);
             }
             catch (Exception ex)
             {
@@ -573,13 +574,13 @@ namespace ZohoAPI
 
                 long recordId = 34770615623115L;
 
-                ZohoAPI.Data.ShareRecords.GetSharedRecordDetails(moduleAPIName, recordId);
+                Data.ShareRecords.GetSharedRecordDetails(moduleAPIName, recordId);
 
-                ZohoAPI.Data.ShareRecords.ShareRecord(moduleAPIName, recordId);
+                Data.ShareRecords.ShareRecord(moduleAPIName, recordId);
 
-                ZohoAPI.Data.ShareRecords.UpdateSharePermissions(moduleAPIName, recordId);
+                Data.ShareRecords.UpdateSharePermissions(moduleAPIName, recordId);
 
-                ZohoAPI.Data.ShareRecords.RevokeSharedRecord(moduleAPIName, recordId);
+                Data.ShareRecords.RevokeSharedRecord(moduleAPIName, recordId);
             }
             catch (Exception ex)
             {
@@ -603,27 +604,27 @@ namespace ZohoAPI
 
                 string conflictId = "34770617029041";
 
-                ZohoAPI.Data.Tag.GetTags(moduleAPIName);
+                Tag.GetTags(moduleAPIName);
 
-                ZohoAPI.Data.Tag.CreateTags(moduleAPIName);
+                Tag.CreateTags(moduleAPIName);
 
-                ZohoAPI.Data.Tag.UpdateTags(moduleAPIName);
+                Tag.UpdateTags(moduleAPIName);
 
-                ZohoAPI.Data.Tag.UpdateTag(moduleAPIName, tagId);
+                Tag.UpdateTag(moduleAPIName, tagId);
 
-                ZohoAPI.Data.Tag.DeleteTag(tagId);
+                Tag.DeleteTag(tagId);
 
-                ZohoAPI.Data.Tag.MergeTags(tagId, conflictId);
+                Tag.MergeTags(tagId, conflictId);
 
-                ZohoAPI.Data.Tag.AddTagsToRecord(moduleAPIName, recordId, tagNames);
+                Tag.AddTagsToRecord(moduleAPIName, recordId, tagNames);
 
-                ZohoAPI.Data.Tag.RemoveTagsFromRecord(moduleAPIName, recordId, tagNames);
+                Tag.RemoveTagsFromRecord(moduleAPIName, recordId, tagNames);
 
-                ZohoAPI.Data.Tag.AddTagsToMultipleRecords(moduleAPIName, recordIds, tagNames);
+                Tag.AddTagsToMultipleRecords(moduleAPIName, recordIds, tagNames);
 
-                ZohoAPI.Data.Tag.RemoveTagsFromMultipleRecords(moduleAPIName, recordIds, tagNames);
+                Tag.RemoveTagsFromMultipleRecords(moduleAPIName, recordIds, tagNames);
 
-                ZohoAPI.Data.Tag.GetRecordCountForTag(moduleAPIName, tagId);
+                Tag.GetRecordCountForTag(moduleAPIName, tagId);
             }
             catch (Exception ex)
             {
@@ -639,17 +640,17 @@ namespace ZohoAPI
 
                 List<long> taxIds = new List<long>() { 34770617643024, 34770615682038 };
 
-                ZohoAPI.Data.Tax.GetTaxes();
+                Data.Tax.GetTaxes();
 
-                ZohoAPI.Data.Tax.CreateTaxes();
+                Data.Tax.CreateTaxes();
 
-                ZohoAPI.Data.Tax.UpdateTaxes();
+                Data.Tax.UpdateTaxes();
 
-                ZohoAPI.Data.Tax.DeleteTaxes(taxIds);
+                Data.Tax.DeleteTaxes(taxIds);
 
-                ZohoAPI.Data.Tax.GetTax(taxId);
+                Data.Tax.GetTax(taxId);
 
-                ZohoAPI.Data.Tax.DeleteTax(taxId);
+                Data.Tax.DeleteTax(taxId);
             }
             catch (Exception ex)
             {
@@ -663,9 +664,9 @@ namespace ZohoAPI
             {
                 long territoryId = 34770613051397;
 
-                ZohoAPI.Data.Territory.GetTerritories();
+                Data.Territory.GetTerritories();
 
-                ZohoAPI.Data.Territory.GetTerritory(territoryId);
+                Data.Territory.GetTerritory(territoryId);
             }
             catch (Exception ex)
             {
@@ -677,13 +678,13 @@ namespace ZohoAPI
         {
             try
             {
-                ZohoAPI.Data.Threading.MultiUser.MultiThread.RunMultiThreadWithMultiUser();
+                Data.Threading.MultiUser.MultiThread.RunMultiThreadWithMultiUser();
 
-                ZohoAPI.Data.Threading.MultiUser.SingleThread.RunSingleThreadWithMultiUser();
+                Data.Threading.MultiUser.SingleThread.RunSingleThreadWithMultiUser();
 
-                ZohoAPI.Data.Threading.SingleUser.MultiThread.RunMultiThreadWithSingleUser();
+                Data.Threading.SingleUser.MultiThread.RunMultiThreadWithSingleUser();
 
-                ZohoAPI.Data.Threading.SingleUser.SingleThread.RunSingleThreadWithSingleUser();
+                Data.Threading.SingleUser.SingleThread.RunSingleThreadWithSingleUser();
             }
             catch (Exception ex)
             {
@@ -697,17 +698,17 @@ namespace ZohoAPI
             {
                 long userId = 34770617639002;
 
-                ZohoAPI.Data.User.GetUsers();
+                Data.User.GetUsers();
 
-                ZohoAPI.Data.User.CreateUser();
+                Data.User.CreateUser();
 
-                ZohoAPI.Data.User.UpdateUsers();
+                Data.User.UpdateUsers();
 
-                ZohoAPI.Data.User.GetUser(userId);
+                Data.User.GetUser(userId);
 
-                ZohoAPI.Data.User.UpdateUser(userId);
+                Data.User.UpdateUser(userId);
 
-                ZohoAPI.Data.User.DeleteUser(userId);
+                Data.User.DeleteUser(userId);
             }
             catch (Exception ex)
             {
@@ -723,11 +724,11 @@ namespace ZohoAPI
 
                 long variableGroupId = 34770613089001;
 
-                ZohoAPI.Data.VariableGroup.GetVariableGroups();
+                Data.VariableGroup.GetVariableGroups();
 
-                ZohoAPI.Data.VariableGroup.GetVariableGroupById(variableGroupId);
+                Data.VariableGroup.GetVariableGroupById(variableGroupId);
 
-                ZohoAPI.Data.VariableGroup.GetVariableGroupByAPIName(variableGroupName);
+                Data.VariableGroup.GetVariableGroupByAPIName(variableGroupName);
             }
             catch (Exception ex)
             {
@@ -745,23 +746,23 @@ namespace ZohoAPI
 
                 string variableName = "Variable552";
 
-                ZohoAPI.Data.Variable.GetVariables();
+                Data.Variable.GetVariables();
 
-                ZohoAPI.Data.Variable.CreateVariables();
+                Data.Variable.CreateVariables();
 
-                ZohoAPI.Data.Variable.UpdateVariables();
+                Data.Variable.UpdateVariables();
 
-                ZohoAPI.Data.Variable.DeleteVariables(variableIds);
+                Data.Variable.DeleteVariables(variableIds);
 
-                ZohoAPI.Data.Variable.GetVariableById(variableId);
+                Data.Variable.GetVariableById(variableId);
 
-                ZohoAPI.Data.Variable.UpdateVariableById(variableId);
+                Data.Variable.UpdateVariableById(variableId);
 
-                ZohoAPI.Data.Variable.DeleteVariable(variableId);
+                Data.Variable.DeleteVariable(variableId);
 
-                ZohoAPI.Data.Variable.GetVariableForAPIName(variableName);
+                Data.Variable.GetVariableForAPIName(variableName);
 
-                ZohoAPI.Data.Variable.UpdateVariableByAPIName(variableName);
+                Data.Variable.UpdateVariableByAPIName(variableName);
             }
             catch (Exception ex)
             {
@@ -783,11 +784,11 @@ namespace ZohoAPI
 
             request.KeepAlive = true;
 
-            Stream memStream = new System.IO.MemoryStream();
+            Stream memStream = new MemoryStream();
 
-            var boundarybytes = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "\r\n");
+            var boundarybytes = Encoding.ASCII.GetBytes("\r\n--" + boundary + "\r\n");
 
-            var endBoundaryBytes = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "--");
+            var endBoundaryBytes = Encoding.ASCII.GetBytes("\r\n--" + boundary + "--");
 
             string formdataTemplate = "\r\n--" + boundary + "\r\nContent-Disposition: form-data; name=\"{0}\";\r\n\r\n{1}";
 
@@ -807,7 +808,7 @@ namespace ZohoAPI
 
                 var header = string.Format(headerTemplate, "file", streamWrapperInstance.Name);
 
-                var headerbytes = System.Text.Encoding.UTF8.GetBytes(header);
+                var headerbytes = Encoding.UTF8.GetBytes(header);
 
                 memStream.Write(headerbytes, 0, headerbytes.Length);
 
