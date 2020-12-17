@@ -191,7 +191,7 @@ namespace ZohoAPI.Data
                             }
 
                             //Get the Object obtained Currency instance
-                            Com.Zoho.Crm.API.Currencies.Currency currency = Field.Currency;
+                            Com.Zoho.Crm.API.Fields.Currency currency = field.Currency;
 
                             //Check if currency is not null
                             if (currency != null)
@@ -716,7 +716,7 @@ namespace ZohoAPI.Data
                             }
 
                             //Get the Object obtained Currency instance
-                            Com.Zoho.Crm.API.Currencies.Currency currency = field.Currency;
+                            Com.Zoho.Crm.API.Fields.Currency currency = field.Currency;
 
                             //Check if currency is not null
                             if (currency != null)

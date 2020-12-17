@@ -62,7 +62,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Territory ModifiedTime: " + territory.ModifiedTime);
 
                             //Get the manager User instance of each Territory
-                            User manager = territory.Manager;
+                            Com.Zoho.Crm.API.Users.User manager = territory.Manager;
 
                             //Check if manager is not null
                             if (manager != null)
@@ -90,7 +90,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Territory Name: " + territory.Name);
 
                             //Get the modifiedBy User instance of each Territory
-                            User modifiedBy = territory.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = territory.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -109,7 +109,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Territory ID: " + territory.Id);
 
                             //Get the createdBy User instance of each Territory
-                            User createdBy = territory.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = territory.CreatedBy;
 
                             //Check if createdBy is not null
                             if (modifiedBy != null)
@@ -227,7 +227,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Territory ModifiedTime: " + territory.ModifiedTime);
 
                             //Get the manager User instance of each Territory
-                            User manager = territory.Manager;
+                            Com.Zoho.Crm.API.Users.User manager = territory.Manager;
 
                             //Check if manager is not null
                             if (manager != null)
@@ -255,7 +255,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Territory Name: " + territory.Name);
 
                             //Get the modifiedBy User instance of each Territory
-                            User modifiedBy = territory.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = territory.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -274,7 +274,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Territory ID: " + territory.Id);
 
                             //Get the createdBy User instance of each Territory
-                            User createdBy = territory.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = territory.CreatedBy;
 
                             //Check if createdBy is not null
                             if (modifiedBy != null)

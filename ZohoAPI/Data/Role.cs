@@ -56,7 +56,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Role DisplayLabel: " + role.DisplayLabel);
 
                             //Get the forecastManager User instance of each Role
-                            User forecastManager = role.ForecastManager;
+                            Com.Zoho.Crm.API.Users.User forecastManager = role.ForecastManager;
 
                             //Check if forecastManager is not null
                             if (forecastManager != null)
@@ -81,7 +81,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Role ID: " + role.Id);
 
                             //Get the reportingTo User instance of each Role
-                            User reportingTo = role.ReportingTo;
+                            Com.Zoho.Crm.API.Users.User reportingTo = role.ReportingTo;
 
                             //Check if reportingTo is not null
                             if (reportingTo != null)
@@ -199,7 +199,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Role DisplayLabel: " + role.DisplayLabel);
 
                             //Get the forecastManager User instance of each Role
-                            User forecastManager = role.ForecastManager;
+                            Com.Zoho.Crm.API.Users.User forecastManager = role.ForecastManager;
 
                             //Check if forecastManager is not null
                             if (forecastManager != null)
@@ -224,7 +224,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Role ID: " + role.Id);
 
                             //Get the reportingTo User instance of each Role
-                            User reportingTo = role.ReportingTo;
+                            Com.Zoho.Crm.API.Users.User reportingTo = role.ReportingTo;
 
                             //Check if reportingTo is not null
                             if (reportingTo != null)

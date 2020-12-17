@@ -419,9 +419,9 @@ namespace ZohoAPI.Data
                                                     
                                                     //Get the Attachment file size
                                                     Console.WriteLine("Record Attachment File Size: " + attachment.Size.ToString());
-                                                    
+
                                                     //Get the parentId Record instance of each attachment
-                                                    API.Record.Record parentId = attachment.ParentId;
+                                                    Com.Zoho.Crm.API.Record.Record parentId = attachment.ParentId;
                                                     
                                                     //Check if parentId is not null
                                                     if(parentId != null)
@@ -902,9 +902,9 @@ namespace ZohoAPI.Data
                                 //Get the details map
                                 foreach(KeyValuePair<string, object> entry in successResponse.Details)
                                 {
-                                    if(entry.Value is User)
+                                    if(entry.Value is Com.Zoho.Crm.API.Users.User)
                                     {
-                                        User user = (User)entry.Value;
+                                        Com.Zoho.Crm.API.Users.User user = (Com.Zoho.Crm.API.Users.User)entry.Value;
 
                                         //Get the Code
                                         Console.WriteLine("User Id: " + user.Id);
@@ -1294,7 +1294,7 @@ namespace ZohoAPI.Data
                             //Check if tags is not null
                             if(tags != null)
                             {
-                                foreach(Tag tag in tags)
+                                foreach(Com.Zoho.Crm.API.Tags.Tag tag in tags)
                                 {
                                     //Get the Name of each Tag
                                     Console.WriteLine("Record Tag Name: " + tag.Name);
@@ -1433,11 +1433,11 @@ namespace ZohoAPI.Data
                                                     }
                                                 }
                                             }
-                                            else if(dataList[0] is Tag)
+                                            else if(dataList[0] is Com.Zoho.Crm.API.Tags.Tag)
                                             {
-                                                List<Tag> tagList = (List<Tag>) value;
+                                                List<Com.Zoho.Crm.API.Tags.Tag> tagList = (List<Com.Zoho.Crm.API.Tags.Tag>) value;
                                                 
-                                                foreach(Tag tag in tagList)
+                                                foreach(Com.Zoho.Crm.API.Tags.Tag tag in tagList)
                                                 {
                                                     //Get the Name of each Tag
                                                     Console.WriteLine("Record Tag Name: " + tag.Name);
@@ -1525,15 +1525,15 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Comment Id: " + comment.Id);
                                                 }
                                             }
-                                            else if (dataList[0] is Attachment)
+                                            else if (dataList[0] is Com.Zoho.Crm.API.Attachments.Attachment)
                                             {
                                                 //Get the list of obtained Attachment instances
-                                                List<Attachment> attachments = (List<Attachment>)dataList; ;
+                                                List<Com.Zoho.Crm.API.Attachments.Attachment> attachments = (List<Com.Zoho.Crm.API.Attachments.Attachment>)dataList; ;
 
-                                                foreach (Attachment attachment in attachments)
+                                                foreach (Com.Zoho.Crm.API.Attachments.Attachment attachment in attachments)
                                                 {
                                                     //Get the owner User instance of each attachment
-                                                    User owner = attachment.Owner;
+                                                    Com.Zoho.Crm.API.Users.User owner = attachment.Owner;
 
                                                     //Check if owner is not null
                                                     if (owner != null)
@@ -1647,9 +1647,9 @@ namespace ZohoAPI.Data
                                             }
                                         }
                                     }
-                                    else if(value is Layout)
+                                    else if(value is Com.Zoho.Crm.API.Layouts.Layout)
                                     {
-                                        Layout layout = (Layout) value;
+                                        Com.Zoho.Crm.API.Layouts.Layout layout = (Com.Zoho.Crm.API.Layouts.Layout) value;
                                         
                                         if(layout != null)
                                         {
@@ -1658,9 +1658,9 @@ namespace ZohoAPI.Data
                                             Console.WriteLine("Record " + keyName + " Name: " + layout.Name);
                                         }
                                     }
-                                    else if(value is User)
+                                    else if(value is Com.Zoho.Crm.API.Users.User)
                                     {
-                                        User user = (User) value;
+                                        Com.Zoho.Crm.API.Users.User user = (Com.Zoho.Crm.API.Users.User) value;
                                         
                                         if(user != null)
                                         {
@@ -1676,7 +1676,7 @@ namespace ZohoAPI.Data
                                         Consent consent = (Consent)value;
 
                                         //Get the Owner User instance of each attachment
-                                        User owner = consent.Owner;
+                                        Com.Zoho.Crm.API.Users.User owner = consent.Owner;
 
                                         //Check if owner is not null
                                         if (owner != null)
@@ -2137,9 +2137,9 @@ namespace ZohoAPI.Data
 
             record1.AddFieldValue(Price_Books.PRICING_MODEL, new Choice<string>("Flat1"));
 
-            List<Tag> tagList = new List<Tag>();
-            
-            Tag tag = new Tag();
+            List<Com.Zoho.Crm.API.Tags.Tag> tagList = new List<Com.Zoho.Crm.API.Tags.Tag>();
+
+            Com.Zoho.Crm.API.Tags.Tag tag = new Com.Zoho.Crm.API.Tags.Tag();
             
             tag.Name = "Testtask";
             
@@ -2938,9 +2938,9 @@ namespace ZohoAPI.Data
                         List<DeletedRecord> deletedRecords = deletedRecordsWrapper.Data;
                         
                         foreach(DeletedRecord deletedRecord in deletedRecords)
-                        {				
+                        {
                             //Get the deletedBy User instance of each DeletedRecord
-                            User deletedBy = deletedRecord.DeletedBy;
+                            Com.Zoho.Crm.API.Users.User deletedBy = deletedRecord.DeletedBy;
                             
                             //Check if deletedBy is not null
                             if(deletedBy != null)
@@ -2960,9 +2960,9 @@ namespace ZohoAPI.Data
                             
                             //Get the Type of each DeletedRecord
                             Console.WriteLine("DeletedRecord Type: " + deletedRecord.Type);
-                            
+
                             //Get the createdBy User instance of each DeletedRecord
-                            User createdBy = deletedRecord.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = deletedRecord.CreatedBy;
                             
                             //Check if createdBy is not null
                             if(createdBy != null)
@@ -3125,9 +3125,9 @@ namespace ZohoAPI.Data
                         {		
                             //Get the ID of each Record
                             Console.WriteLine("Record ID: " + record.Id);
-                            
+
                             //Get the createdBy User instance of each Record
-                            User createdBy = record.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = record.CreatedBy;
                             
                             //Check if createdBy is not null
                             if(createdBy != null)
@@ -3144,9 +3144,9 @@ namespace ZohoAPI.Data
                             
                             //Get the CreatedTime of each Record
                             Console.WriteLine("Record CreatedTime: " + record.CreatedTime);
-                            
+
                             //Get the modifiedBy User instance of each Record
-                            User modifiedBy = record.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = record.ModifiedBy;
                             
                             //Check if modifiedBy is not null
                             if(modifiedBy != null)
@@ -3165,12 +3165,12 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Record ModifiedTime: " + record.ModifiedTime);
                             
                             //Get the list of Tag instance each Record
-                            List<Tag> tags = record.Tag;
+                            List<Com.Zoho.Crm.API.Tags.Tag> tags = record.Tag;
                             
                             //Check if tags is not null
                             if(tags != null)
                             {
-                                foreach(Tag tag in tags)
+                                foreach(Com.Zoho.Crm.API.Tags.Tag tag in tags)
                                 {
                                     //Get the Name of each Tag
                                     Console.WriteLine("Record Tag Name: " + tag.Name);
@@ -3309,11 +3309,11 @@ namespace ZohoAPI.Data
                                                     }
                                                 }
                                             }
-                                            else if (dataList[0] is Tag)
+                                            else if (dataList[0] is Com.Zoho.Crm.API.Tags.Tag)
                                             {
-                                                List<Tag> tagList = (List<Tag>)value;
+                                                List<Com.Zoho.Crm.API.Tags.Tag> tagList = (List<Com.Zoho.Crm.API.Tags.Tag>)value;
 
-                                                foreach (Tag tag in tagList)
+                                                foreach (Com.Zoho.Crm.API.Tags.Tag tag in tagList)
                                                 {
                                                     //Get the Name of each Tag
                                                     Console.WriteLine("Record Tag Name: " + tag.Name);
@@ -3401,15 +3401,15 @@ namespace ZohoAPI.Data
                                                     Console.WriteLine("Record Comment Id: " + comment.Id);
                                                 }
                                             }
-                                            else if (dataList[0] is Attachment)
+                                            else if (dataList[0] is Com.Zoho.Crm.API.Attachments.Attachment)
                                             {
                                                 //Get the list of obtained Attachment instances
-                                                List<Attachment> attachments = (List<Attachment>)dataList; ;
+                                                List<Com.Zoho.Crm.API.Attachments.Attachment> attachments = (List<Com.Zoho.Crm.API.Attachments.Attachment>)dataList; ;
 
-                                                foreach (Attachment attachment in attachments)
+                                                foreach (Com.Zoho.Crm.API.Attachments.Attachment attachment in attachments)
                                                 {
                                                     //Get the owner User instance of each attachment
-                                                    User owner = attachment.Owner;
+                                                    Com.Zoho.Crm.API.Users.User owner = attachment.Owner;
 
                                                     //Check if owner is not null
                                                     if (owner != null)
@@ -3523,9 +3523,9 @@ namespace ZohoAPI.Data
                                             }
                                         }
                                     }
-                                    else if (value is Layout)
+                                    else if (value is Com.Zoho.Crm.API.Layouts.Layout)
                                     {
-                                        Layout layout = (Layout)value;
+                                        Com.Zoho.Crm.API.Layouts.Layout layout = (Com.Zoho.Crm.API.Layouts.Layout)value;
 
                                         if (layout != null)
                                         {
@@ -3534,9 +3534,9 @@ namespace ZohoAPI.Data
                                             Console.WriteLine("Record " + keyName + " Name: " + layout.Name);
                                         }
                                     }
-                                    else if (value is User)
+                                    else if (value is Com.Zoho.Crm.API.Users.User)
                                     {
-                                        User user = (User)value;
+                                        Com.Zoho.Crm.API.Users.User user = (Com.Zoho.Crm.API.Users.User)value;
 
                                         if (user != null)
                                         {
@@ -3552,7 +3552,7 @@ namespace ZohoAPI.Data
                                         Consent consent = (Consent)value;
 
                                         //Get the Owner User instance of each attachment
-                                        User owner = consent.Owner;
+                                        Com.Zoho.Crm.API.Users.User owner = consent.Owner;
 
                                         //Check if owner is not null
                                         if (owner != null)

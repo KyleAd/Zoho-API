@@ -105,7 +105,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("ShareRecord Permission: " + shareRecord.Permission);
 
                             //Get the shared User instance of each ShareRecord
-                            User user = shareRecord.User;
+                            Com.Zoho.Crm.API.Users.User user = shareRecord.User;
 
                             //Check if user is not null
                             if (user != null)
@@ -123,9 +123,9 @@ namespace ZohoAPI.Data
 
                         if (responseWrapper.ShareableUser != null)
                         {
-                            List<User> shareableUsers = responseWrapper.ShareableUser;
+                            List<Com.Zoho.Crm.API.Users.User> shareableUsers = responseWrapper.ShareableUser;
 
-                            foreach (User shareableUser in shareableUsers)
+                            foreach (Com.Zoho.Crm.API.Users.User shareableUser in shareableUsers)
                             {
                                 //Get the ID of the shareable User
                                 Console.WriteLine("ShareRecord User-ID: " + shareableUser.Id);
@@ -228,7 +228,7 @@ namespace ZohoAPI.Data
                 //Set the access permission given to the user for that record.
                 share1.Permission = "read_write";
 
-                User user1 = new User();
+                Com.Zoho.Crm.API.Users.User user1 = new Com.Zoho.Crm.API.Users.User();
 
                 user1.Id = 34770615791024;
 
@@ -244,7 +244,7 @@ namespace ZohoAPI.Data
 
             share1.Permission = "read_write";
 
-            User user = new User();
+            Com.Zoho.Crm.API.Users.User user = new Com.Zoho.Crm.API.Users.User();
 
             user.Id = 34770615791024;
 
@@ -411,7 +411,7 @@ namespace ZohoAPI.Data
 
             share1.Permission = "full_access";
 
-            User user = new User();
+            Com.Zoho.Crm.API.Users.User user = new Com.Zoho.Crm.API.Users.User();
 
             user.Id = 34770615791024;
 

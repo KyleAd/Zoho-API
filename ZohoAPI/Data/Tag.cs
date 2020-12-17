@@ -81,7 +81,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Tag Name: " + tag.Name);
 
                             //Get the modifiedBy User instance of each Tag
-                            User modifiedBy = tag.ModifiedBy;
+                            Com.Zoho.Crm.API.Users.User modifiedBy = tag.ModifiedBy;
 
                             //Check if modifiedBy is not null
                             if (modifiedBy != null)
@@ -97,7 +97,7 @@ namespace ZohoAPI.Data
                             Console.WriteLine("Tag ID: " + tag.Id);
 
                             //Get the createdBy User instance of each Tag
-                            User createdBy = tag.CreatedBy;
+                            Com.Zoho.Crm.API.Users.User createdBy = tag.CreatedBy;
 
                             //Check if createdBy is not null
                             if (createdBy != null)

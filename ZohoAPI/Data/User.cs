@@ -318,12 +318,12 @@ namespace ZohoAPI.Data
                             Console.WriteLine("User FullName: " + user.FullName);
 
                             //Get the list of obtained Territory instances
-                            List<Territory> territories = user.Territories;
+                            List<Com.Zoho.Crm.API.Users.Territory> territories = user.Territories;
 
                             //Check if territories is not null
                             if (territories != null)
                             {
-                                foreach (Territory territory in territories)
+                                foreach (Com.Zoho.Crm.API.Users.Territory territory in territories)
                                 {
                                     //Get the Manager of the Territory
                                     Console.WriteLine("User Territory Manager: " + territory.Manager);
@@ -1084,12 +1084,12 @@ namespace ZohoAPI.Data
                             Console.WriteLine("User FullName: " + user.FullName);
 
                             //Get the list of obtained Territory instances
-                            List<Territory> territories = user.Territories;
+                            List<Com.Zoho.Crm.API.Users.Territory> territories = user.Territories;
 
                             //Check if territories is not null
                             if (territories != null)
                             {
-                                foreach (Territory territory in territories)
+                                foreach (Com.Zoho.Crm.API.Users.Territory territory in territories)
                                 {
                                     //Get the Manager of the Territory
                                     Console.WriteLine("User Territory Manager: " + territory.Manager);
