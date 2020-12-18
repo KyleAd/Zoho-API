@@ -44,7 +44,7 @@ namespace ZohoAPI.Initializer
 
 			//Token token = new OAuthToken("1000.xxxx", "xxxxxx", "1000.xxxxxx.xxxxxx", TokenType.GRANT, "https://www.zoho.com");
 
-			Token token = new OAuthToken("1000.0LS49EPZD7N1Z3VBCIT9JK5XJUZX9F", "0388a9876e176d333c8d524fbbcee3fcb8895b5f4c", "GRANT token", TokenType.GRANT, "https://www.zoho.com");
+			Token token = new OAuthToken("1000.0LS49EPZD7N1Z3VBCIT9JK5XJUZX9F", "0388a9876e176d333c8d524fbbcee3fcb8895b5f4c", "https://altiatechuri.com", TokenType.GRANT, "https://www.zoho.com");
 
 			/*
 		     * Create an instance of TokenStore.
