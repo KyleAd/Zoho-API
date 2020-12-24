@@ -1,5 +1,7 @@
+##Description
 Zoho API receives data from the authorized client. The intention here is to manipulate API data from and through Zoho in this executable.
 
+##Tasks
 DONE
 - Zoho self-client created.
 - Project Initialized.
@@ -9,3 +11,6 @@ DONE
 
 TO DO
 - (Tasks to be updated)
+
+##Initializer
+TO DO
