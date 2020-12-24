@@ -30,7 +30,7 @@ namespace ZohoAPI.Initializer
 		     * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter
 		     * Available Environments: PRODUCTION, DEVELOPER, SANDBOX
 		     */
-			Environment environment = EUDataCenter.PRODUCTION;
+			Com.Zoho.Crm.API.Dc.DataCenter.Environment environment = USDataCenter.PRODUCTION;
 
 			/*
 		     * Create a Token instance
@@ -44,7 +44,7 @@ namespace ZohoAPI.Initializer
 
 			//Token token = new OAuthToken("1000.xxxx", "xxxxxx", "1000.xxxxxx.xxxxxx", TokenType.GRANT, "https://www.zoho.com");
 
-			Token token = new OAuthToken("1000.0LS49EPZD7N1Z3VBCIT9JK5XJUZX9F", "0388a9876e176d333c8d524fbbcee3fcb8895b5f4c", "https://altiatechuri.com", TokenType.GRANT, "https://www.zoho.com");
+			Token token = new OAuthToken("1000.32A3H9K58K7WBSSTKWUME9KPML1G6A", "053a706cc38bce664db75293733551b70f8433057d", "1000.fb7a8eb64824a8c448d3a3b5480f7660.7ed271bd17a72be70b6933fe813433a6", TokenType.GRANT, "https://www.zoho.com");
 
 			/*
 		     * Create an instance of TokenStore.
@@ -71,7 +71,7 @@ namespace ZohoAPI.Initializer
             */
 			SDKConfig config = new SDKConfig.Builder().SetAutoRefreshFields(true).SetPickListValidation(false).Build();
 
-			string resourcePath = "/Users/Documents/GitLab/SampleApp/zohocrm-csharp-sdk-sample-application";
+			string resourcePath = "/Users/TestSDK";
 
 			/**
 			 * Create an instance of RequestProxy class that takes the following parameters

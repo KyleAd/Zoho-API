@@ -4,12 +4,11 @@
     <OutputType>Exe</OutputType>
     <StartupObject>ZohoAPI.Program</StartupObject>
     <TargetFramework>net5.0</TargetFramework>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySQL.Data" Version="6.9.12" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="ZCRMSDK" Version="3.0.0" />
   </ItemGroup>
 

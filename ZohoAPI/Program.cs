@@ -24,28 +24,28 @@ namespace ZohoAPI
         static void Main(string[] args)
         {
             Initialize.SDKInitialize();
-            Attachment();
-            BluePrint();
-            BulkRead();
-            BulkWrite();
+            //Attachment();
+            //BluePrint();
+            //BulkRead();
+            //BulkWrite();
             ContactRoles();
             Currency();
-            CustomView();
-            Field();
-            File();
-            Layout();
+            //CustomView();
+            //Field();
+            //File();
+            //Layout();
             Module();
             Note();
             Notification();
             Organization();
             Profile();
             Query();
-            Record();
-            RelatedList();
-            RelatedRecords();
+            //Record();
+            //RelatedList();
+            //RelatedRecords();
             Role();
-            ShareRecords();
-            Tags();
+            //ShareRecords();
+            //Tags();
             Tax();
             Territory();
             User();
@@ -169,13 +169,13 @@ namespace ZohoAPI
         {
             try
             {
-                long contactRoleId = 34770617540001;
+                //long contactRoleId = 34770617540001;
 
-                List<long> contactRoleIds = new List<long>() { 34770617600010, 34770617600011, 34770617600012, 34770617600013, 34770617600014 };
+                //List<long> contactRoleIds = new List<long>() { 34770617600010, 34770617600011, 34770617600012, 34770617600013, 34770617600014 };
 
                 Data.ContactRoles.GetContactRoles();
 
-                Data.ContactRoles.CreateContactRoles();
+                /*Data.ContactRoles.CreateContactRoles();
 
                 Data.ContactRoles.UpdateContactRoles();
 
@@ -185,7 +185,7 @@ namespace ZohoAPI
 
                 Data.ContactRoles.UpdateContactRole(contactRoleId);
 
-                Data.ContactRoles.DeleteContactRole(contactRoleId);
+                Data.ContactRoles.DeleteContactRole(contactRoleId);*/
             }
             catch (Exception ex)
             {
@@ -197,21 +197,21 @@ namespace ZohoAPI
         {
             try
             {
-                long currencyId = 34770617368016;
+                //long currencyId = 34770617368016;
 
                 Data.Currency.GetCurrencies();
 
-                Data.Currency.AddCurrencies();
+                //Data.Currency.AddCurrencies();
 
-                Data.Currency.UpdateCurrencies();
+                //Data.Currency.UpdateCurrencies();
 
-                Data.Currency.EnableMultipleCurrencies();
+                //Data.Currency.EnableMultipleCurrencies();
 
-                Data.Currency.UpdateBaseCurrency();
+                //Data.Currency.UpdateBaseCurrency();
 
-                Data.Currency.GetCurrency(currencyId);
+                //Data.Currency.GetCurrency(currencyId);
 
-                Data.Currency.UpdateCurrency(currencyId);
+                //Data.Currency.UpdateCurrency(currencyId);
             }
             catch (Exception ex)
             {
@@ -316,17 +316,17 @@ namespace ZohoAPI
         {
             try
             {
-                string moduleAPIName = "apiName1";
+                //string moduleAPIName = "apiName1";
 
-                long moduleId = 34770613905003;
+                //long moduleId = 34770613905003;
 
                 Modules.GetModules();
 
-                Modules.GetModule(moduleAPIName);
+                //Modules.GetModule(moduleAPIName);
 
-                Modules.UpdateModuleByAPIName(moduleAPIName);
+                //Modules.UpdateModuleByAPIName(moduleAPIName);
 
-                Modules.UpdateModuleById(moduleId);
+                //Modules.UpdateModuleById(moduleId);
             }
             catch (Exception ex)
             {
@@ -338,23 +338,23 @@ namespace ZohoAPI
         {
             try
             {
-                List<long> notesId = new List<long>() { 34770617613024, 34770617613023, 34770617613022 };
+                //List<long> notesId = new List<long>() { 34770617613024, 34770617613023, 34770617613022 };
 
-                long noteId = 34770617613021;
+                //long noteId = 34770617613021;
 
                 Data.Note.GetNotes();
 
-                Data.Note.CreateNotes();
+                //Data.Note.CreateNotes();
 
-                Data.Note.UpdateNotes();
+                //Data.Note.UpdateNotes();
 
-                Data.Note.DeleteNotes(notesId);
+                //Data.Note.DeleteNotes(notesId);
 
-                Data.Note.GetNote(noteId);
+                //Data.Note.GetNote(noteId);
 
-                Data.Note.UpdateNote(noteId);
+                //Data.Note.UpdateNote(noteId);
 
-                Data.Note.DeleteNote(noteId);
+                //Data.Note.DeleteNote(noteId);
             }
             catch (Exception ex)
             {
@@ -366,19 +366,19 @@ namespace ZohoAPI
         {
             try
             {
-                List<long> channelIds = new List<long>() { 1006800212 };
+                //List<long> channelIds = new List<long>() { 1006800212 };
 
-                Data.Notification.EnableNotifications();
+                //Data.Notification.EnableNotifications();
 
                 Data.Notification.GetNotificationDetails();
 
-                Data.Notification.UpdateNotifications();
+                //Data.Notification.UpdateNotifications();
 
-                Data.Notification.UpdateNotification();
+                //Data.Notification.UpdateNotification();
 
-                Data.Notification.DisableNotifications(channelIds);
+                //Data.Notification.DisableNotifications(channelIds);
 
-                Data.Notification.DisableNotification();
+                //Data.Notification.DisableNotification();
             }
             catch (Exception ex)
             {
@@ -390,11 +390,11 @@ namespace ZohoAPI
         {
             try
             {
-                string absoluteFilePath = "/Users/Desktop/download.png";
+                //string absoluteFilePath = "/Users/Desktop/download.png";
 
                 Data.Organization.GetOrganization();
 
-                Data.Organization.UploadOrganizationPhoto(absoluteFilePath);
+                //Data.Organization.UploadOrganizationPhoto(absoluteFilePath);
             }
             catch (Exception ex)
             {
@@ -406,11 +406,11 @@ namespace ZohoAPI
         {
             try
             {
-                long profileId = 34770610026011;
+                //long profileId = 34770610026011;
 
                 Data.Profile.GetProfiles();
 
-                Data.Profile.GetProfile(profileId);
+                //Data.Profile.GetProfile(profileId);
             }
             catch (Exception ex)
             {
@@ -554,11 +554,11 @@ namespace ZohoAPI
         {
             try
             {
-                long roleId = 34770610026008;
+                //long roleId = 34770610026008;
 
                 Data.Role.GetRoles();
 
-                Data.Role.GetRole(roleId);
+                //Data.Role.GetRole(roleId);
             }
             catch (Exception ex)
             {
@@ -636,21 +636,21 @@ namespace ZohoAPI
         {
             try
             {
-                long taxId = 34770616449002;
+                //long taxId = 34770616449002;
 
-                List<long> taxIds = new List<long>() { 34770617643024, 34770615682038 };
+                //List<long> taxIds = new List<long>() { 34770617643024, 34770615682038 };
 
                 Data.Tax.GetTaxes();
 
-                Data.Tax.CreateTaxes();
+                //Data.Tax.CreateTaxes();
 
-                Data.Tax.UpdateTaxes();
+                //Data.Tax.UpdateTaxes();
 
-                Data.Tax.DeleteTaxes(taxIds);
+                //Data.Tax.DeleteTaxes(taxIds);
 
-                Data.Tax.GetTax(taxId);
+                //Data.Tax.GetTax(taxId);
 
-                Data.Tax.DeleteTax(taxId);
+                //Data.Tax.DeleteTax(taxId);
             }
             catch (Exception ex)
             {
@@ -662,11 +662,11 @@ namespace ZohoAPI
         {
             try
             {
-                long territoryId = 34770613051397;
+                //long territoryId = 34770613051397;
 
                 Data.Territory.GetTerritories();
 
-                Data.Territory.GetTerritory(territoryId);
+                //Data.Territory.GetTerritory(territoryId);
             }
             catch (Exception ex)
             {
@@ -696,19 +696,19 @@ namespace ZohoAPI
         {
             try
             {
-                long userId = 34770617639002;
+                //long userId = 34770617639002;
 
                 Data.User.GetUsers();
 
-                Data.User.CreateUser();
+                //Data.User.CreateUser();
 
-                Data.User.UpdateUsers();
+                //Data.User.UpdateUsers();
 
-                Data.User.GetUser(userId);
+                //Data.User.GetUser(userId);
 
-                Data.User.UpdateUser(userId);
+                //Data.User.UpdateUser(userId);
 
-                Data.User.DeleteUser(userId);
+                //Data.User.DeleteUser(userId);
             }
             catch (Exception ex)
             {
@@ -720,15 +720,15 @@ namespace ZohoAPI
         {
             try
             {
-                string variableGroupName = "General";
+                //string variableGroupName = "General";
 
-                long variableGroupId = 34770613089001;
+                //long variableGroupId = 34770613089001;
 
                 Data.VariableGroup.GetVariableGroups();
 
-                Data.VariableGroup.GetVariableGroupById(variableGroupId);
+                //Data.VariableGroup.GetVariableGroupById(variableGroupId);
 
-                Data.VariableGroup.GetVariableGroupByAPIName(variableGroupName);
+                //Data.VariableGroup.GetVariableGroupByAPIName(variableGroupName);
             }
             catch (Exception ex)
             {
@@ -740,29 +740,29 @@ namespace ZohoAPI
         {
             try
             {
-                List<long> variableIds = new List<long>() { 34770617636020, 34770617636022 };
+                //List<long> variableIds = new List<long>() { 34770617636020, 34770617636022 };
 
-                long variableId = 34770617444007;
+                //long variableId = 34770617444007;
 
-                string variableName = "Variable552";
+                //string variableName = "Variable552";
 
                 Data.Variable.GetVariables();
 
-                Data.Variable.CreateVariables();
+                //Data.Variable.CreateVariables();
 
-                Data.Variable.UpdateVariables();
+                //Data.Variable.UpdateVariables();
 
-                Data.Variable.DeleteVariables(variableIds);
+                //Data.Variable.DeleteVariables(variableIds);
 
-                Data.Variable.GetVariableById(variableId);
+                //Data.Variable.GetVariableById(variableId);
 
-                Data.Variable.UpdateVariableById(variableId);
+                //Data.Variable.UpdateVariableById(variableId);
 
-                Data.Variable.DeleteVariable(variableId);
+                //Data.Variable.DeleteVariable(variableId);
 
-                Data.Variable.GetVariableForAPIName(variableName);
+                //Data.Variable.GetVariableForAPIName(variableName);
 
-                Data.Variable.UpdateVariableByAPIName(variableName);
+                //Data.Variable.UpdateVariableByAPIName(variableName);
             }
             catch (Exception ex)
             {
