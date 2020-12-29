@@ -16,7 +16,7 @@ TO DO
 - (Tasks to be updated)
 
 ## Usage
-explain here
+This application allows us to manipulate data through and from Zoho. It contains a Zoho API package that has API references and doesn't require us to write our own client classes. This project is already Initalized with a self client that works effectively. However, if you want to use a new client, follow the Initializer sections instructions. 
 
 ### Initializer
 Since Zoho CRM APIs are authenticated with OAuth2 standards, you should register your client app with Zoho. To register your app:
@@ -37,4 +37,4 @@ Once that is done, you will now have to fill in these details for the OAuthToken
 ```
 Token token = new OAuthToken("Client ID", "Client Secret", "Generated Code", TokenType.GRANT, "https://www.zoho.com");
 ```
-
+### Executable
