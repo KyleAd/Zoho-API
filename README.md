@@ -16,7 +16,7 @@ TO DO
 - (Tasks to be updated)
 
 ## Usage
-This application allows us to manipulate data through and from Zoho. It contains a Zoho API package that has API references and doesn't require us to write our own client classes. This project is already Initalized with a self client that works effectively. However, if you want to use a new client, follow the Initializer sections instructions. 
+This application allows us to manipulate data through and from Zoho. It contains a Zoho API package that has API references and doesn't require us to write our own client classes. This project is already Initalized with a self client that works effectively. However, if you want to use a new client, follow the Intructions in the Initializer section. 
 
 ### Initializer
 Since Zoho CRM APIs are authenticated with OAuth2 standards, you should register your client app with Zoho. To register your app:
@@ -38,3 +38,6 @@ Once that is done, you will now have to fill in these details for the OAuthToken
 Token token = new OAuthToken("Client ID", "Client Secret", "Generated Code", TokenType.GRANT, "https://www.zoho.com");
 ```
 ### Executable
+The main executable is Program.cs which contains a master class with many sub classes that all run their own seperate functions. Each class references a data file which references a ZohoAPI package that helps with the API. For this project, all functions and API calls are listed, but not all of them are used. Most are commented out until they are needed. 
+
+Each subclass has commented out code, this will likely be POST, PULL, DELETE functions that currently aren't being used in the project. However, if you want to make use of these features, you only have to take out the comments and you're free to use them however you wish. Currently, there is no user functionality in the executable, so if you want to make a POST call, you will have to manually assign what value you want to POST in the code, rather than a user input in the running console. This could be updated in a future version. 
