@@ -15,7 +15,10 @@ DONE
 TO DO
 - (Tasks to be updated)
 
-## Initializer
+## Usage
+explain here
+
+### Initializer
 Since Zoho CRM APIs are authenticated with OAuth2 standards, you should register your client app with Zoho. To register your app:
 
 - Visit this page https://api-console.zoho.com/
@@ -34,4 +37,4 @@ Once that is done, you will now have to fill in these details for the OAuthToken
 ```
 Token token = new OAuthToken("Client ID", "Client Secret", "Generated Code", TokenType.GRANT, "https://www.zoho.com");
 ```
-## Usage
+
