@@ -49,8 +49,8 @@ namespace ZohoAPI
             Tax();
             Territory();
             User();
-            VariableGroup();
-            Variable();
+            //VariableGroup(); //Access Denied
+            //Variable(); //No Permission
             //Threading();
             //TestUpload();
         }
