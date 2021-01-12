@@ -28,27 +28,27 @@ namespace ZohoAPI
             //BluePrint();
             //BulkRead();
             //BulkWrite();
-            ContactRoles();
-            Currency();
+            //ContactRoles();
+            //Currency();
             //CustomView();
             //Field();
             //File();
             //Layout();
-            Module();
-            Note();
-            Notification();
-            Organization();
-            Profile();
-            Query();
-            //Record();
+            //Module();
+            //Note();
+           /// Notification();
+            //Organization();
+            //Profile();
+           // Query();
+            Record();
             //RelatedList();
             //RelatedRecords();
-            Role();
+            //Role();
             //ShareRecords();
             //Tags();
-            Tax();
-            Territory();
-            User();
+            //Tax();
+            //Territory();
+            //User();
             //VariableGroup(); //Access Denied
             //Variable(); //No Permission
             //Threading();
@@ -434,11 +434,11 @@ namespace ZohoAPI
         {
             try
             {
-                string moduleAPIName = "Leads";
+                string moduleAPIName = "Deals";
 
-                long recordId = 34770617589001;
+                //long recordId = 34770617589001;
 
-                string destinationFolder = "/Users/Desktop/field/";
+                //string destinationFolder = "/Users/Desktop/field/";
 
                 //List<string> modules = new List<string>() { "products", "Tasks", "Vendors", "Calls", "Leads", "Deals", "Campaigns", "Quotes", "Invoices", "Attachments", "Price_Books", "Sales_Orders", "Contacts", "Solutions", "Events", "Purchase_Orders", "Accounts", "Cases", "Notes" };
 
@@ -447,43 +447,43 @@ namespace ZohoAPI
                 //    Com.Zoho.Crm.Sample.Record.Record.GetRecords(module);
                 //}
 
-                string absoluteFilePath = "/Users/Desktop/field/download.png";
+                //string absoluteFilePath = "/Users/Desktop/field/download.png";
 
-                List<long> recordIds = new List<long>() { 34770617079170, 34770616595015, 34770615908001 };
+                //List<long> recordIds = new List<long>() { 34770617079170, 34770616595015, 34770615908001 };
 
-                string jobId = "34770617633026";
+                //string jobId = "34770617633026";
 
-                Data.Record.GetRecord(moduleAPIName, recordId, destinationFolder);
+                //Data.Record.GetRecord(moduleAPIName, recordId, destinationFolder);
 
-                Data.Record.UpdateRecord(moduleAPIName, recordId);
+                //Data.Record.UpdateRecord(moduleAPIName, recordId);
 
-                Data.Record.DeleteRecord(moduleAPIName, recordId);
+                //Data.Record.DeleteRecord(moduleAPIName, recordId);
 
                 Data.Record.GetRecords(moduleAPIName);
 
-                Data.Record.CreateRecords(moduleAPIName);
+                //Data.Record.CreateRecords(moduleAPIName);
 
-                Data.Record.UpdateRecords(moduleAPIName);
+                //Data.Record.UpdateRecords(moduleAPIName);
 
-                Data.Record.DeleteRecords(moduleAPIName, recordIds);
+                //Data.Record.DeleteRecords(moduleAPIName, recordIds);
 
-                Data.Record.UpsertRecords(moduleAPIName);
+                //Data.Record.UpsertRecords(moduleAPIName);
 
-                Data.Record.GetDeletedRecords(moduleAPIName);
+                //Data.Record.GetDeletedRecords(moduleAPIName);
 
-                Data.Record.SearchRecords(moduleAPIName);
+                //Data.Record.SearchRecords(moduleAPIName);
 
-                Data.Record.ConvertLead(recordId);
+                //Data.Record.ConvertLead(recordId);
 
-                Data.Record.UploadPhoto(moduleAPIName, recordId, absoluteFilePath);
+                //Data.Record.UploadPhoto(moduleAPIName, recordId, absoluteFilePath);
 
-                Data.Record.GetPhoto(moduleAPIName, recordId, destinationFolder);
+                //Data.Record.GetPhoto(moduleAPIName, recordId, destinationFolder);
 
-                Data.Record.DeletePhoto(moduleAPIName, recordId);
+                //Data.Record.DeletePhoto(moduleAPIName, recordId);
 
-                Data.Record.MassUpdateRecords(moduleAPIName);
+                //Data.Record.MassUpdateRecords(moduleAPIName);
 
-                Data.Record.GetMassUpdateStatus(moduleAPIName, jobId);
+                //Data.Record.GetMassUpdateStatus(moduleAPIName, jobId);
             }
             catch (Exception ex)
             {

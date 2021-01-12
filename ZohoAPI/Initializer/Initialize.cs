@@ -19,7 +19,7 @@ namespace ZohoAPI.Initializer
 			 * 1 -> Level of the log messages to be logged. Can be configured by typing Levels "." and choose any level from the list displayed.
 			 * 2 -> Absolute file path, where messages need to be logged.
 			 */
-			Logger logger = Logger.GetInstance(Logger.Levels.ALL, @"C:\Users\KyleAdamson\OneDrive - ALTIATECH LTD\Documents\Work Projects\Zoho Api\csharp_sdk_log.log");
+			Logger logger = Logger.GetInstance(Logger.Levels.ALL, @"C:\Users\KyleAdamson\OneDrive - ALTIATECH LTD\Documents\Work Projects\Zoho Api\csharp_sdk_log1.log");
 
 			//Create an UserSignature instance that takes user Email as parameter
 			UserSignature user = new UserSignature("kyle@altiatech.com");
@@ -71,7 +71,7 @@ namespace ZohoAPI.Initializer
             */
 			SDKConfig config = new SDKConfig.Builder().SetAutoRefreshFields(true).SetPickListValidation(false).Build();
 
-			string resourcePath = "/Users/TestSDK";
+			string resourcePath = @"C:\Users\KyleAdamson\OneDrive - ALTIATECH LTD\Documents\Work Projects\Zoho Api";
 
 			/**
 			 * Create an instance of RequestProxy class that takes the following parameters
