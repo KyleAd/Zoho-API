@@ -43,9 +43,11 @@ Logger logger = Logger.GetInstance(Logger.Levels.ALL, "/Users/TestSDK/csharp_sdk
 
 UserSignature user = new UserSignature("Your email here");
 
+Com.Zoho.Crm.API.Dc.DataCenter.Environment environment = USDataCenter.PRODUCTION;
+
 TokenStore tokenstore = new FileStore("/Users/TestSDK/csharp_sdk_token.txt");
 ```
-The directories for Logger and Tokenstore should be fine, but if they aren't generating files, you should change it to a manual safe location in your work space. 
+The directories for Logger and Tokenstore should be fine, but if they aren't generating files, you should change it to a manual safe location in your work space. Make sure you have the correct data center set and it should always be in production mode. The one we are currently using for AT is USDataCenter. 
 
 ### Executable
 The main executable is Program.cs which contains a master class with many sub classes that all run their own seperate functions. Each class references a data file which references a ZohoAPI package that helps with the API. For this project, all functions and API calls are listed, but not all of them are used. Most are commented out until they are needed. 
