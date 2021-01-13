@@ -37,6 +37,16 @@ Once that is done, you will now have to fill in these details for the OAuthToken
 ```
 Token token = new OAuthToken("Client ID", "Client Secret", "Generated Code", TokenType.GRANT, "https://www.zoho.com");
 ```
+This also applies for the rest of the functions in the Initializer class, they have to follow your own account and machine settings in order for it to work. For example:
+```
+Logger logger = Logger.GetInstance(Logger.Levels.ALL, "/Users/TestSDK/csharp_sdk_log.log");
+
+UserSignature user = new UserSignature("Your email here");
+
+TokenStore tokenstore = new FileStore("/Users/TestSDK/csharp_sdk_token.txt");
+```
+The directories for Logger and Tokenstore should be fine, but if they aren't generating files, you should change it to a manual safe location in your work space. 
+
 ### Executable
 The main executable is Program.cs which contains a master class with many sub classes that all run their own seperate functions. Each class references a data file which references a ZohoAPI package that helps with the API. For this project, all functions and API calls are listed, but not all of them are used. Most are commented out until they are needed. 
 
