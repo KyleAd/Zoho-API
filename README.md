@@ -10,9 +10,9 @@ DONE
 - Project Initialized.
 - Zoho Auth procedure working
 - GET API calls from Zoho
-- POST, PUT, DELETE API calls through Zoho. 
 
 TO DO
+- POST, PUT, DELETE API calls through Zoho. 
 - (Tasks to be updated)
 
 ## Usage
